@@ -1,0 +1,6 @@
+[submodule "ultimate-makefile"]
+	path = ultimate-makefile
+	url = https://github.com/tamasseller/ultimate-makefile
+[submodule "pet"]
+	path = pet
+	url = https://github.com/tamasseller/pet
