@@ -1,4 +1,4 @@
-#include "app_ble.h"
+#include "../.example_app/app_ble.h"
 
 
 NRF_BLE_GATT_DEF(m_gatt);                                                       /**< GATT module instance. */

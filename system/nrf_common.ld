@@ -1,49 +1,5 @@
-/* Linker script for Nordic Semiconductor nRF devices
- *
- * Version: Sourcery G++ 4.5-1
- * Support: https://support.codesourcery.com/GNUToolchain/
- *
- * Copyright (c) 2007, 2008, 2009, 2010 CodeSourcery, Inc.
- *
- * The authors hereby grant permission to use, copy, modify, distribute,
- * and license this software and its documentation for any purpose, provided
- * that existing copyright notices are retained in all copies and that this
- * notice is included verbatim in any distributions.  No written agreement,
- * license, or royalty fee is required for any of the authorized uses.
- * Modifications to this software may be copyrighted by their authors
- * and need not follow the licensing terms described here, provided that
- * the new terms are clearly indicated on the first page of each file where
- * they apply.
- */
 OUTPUT_FORMAT ("elf32-littlearm", "elf32-bigarm", "elf32-littlearm")
 
-/* Linker script to place sections and symbol values. Should be used together
- * with other linker script that defines memory regions FLASH and RAM.
- * It references following symbols, which must be defined in code:
- *   Reset_Handler : Entry of reset handler
- *
- * It defines following symbols, which code can use without definition:
- *   __exidx_start
- *   __exidx_end
- *   __etext
- *   __data_start__
- *   __preinit_array_start
- *   __preinit_array_end
- *   __init_array_start
- *   __init_array_end
- *   __fini_array_start
- *   __fini_array_end
- *   __data_end__
- *   __bss_start__
- *   __bss_end__
- *   __end__
- *   end
- *   __HeapBase
- *   __HeapLimit
- *   __StackLimit
- *   __StackTop
- *   __stack
- */
 ENTRY(Reset_Handler)
 
 SECTIONS
@@ -74,18 +30,6 @@ SECTIONS
 
         KEEP(*(.eh_frame*))
     } > FLASH
-
-    .ARM.extab :
-    {
-        *(.ARM.extab* .gnu.linkonce.armextab.*)
-    } > FLASH
-
-    __exidx_start = .;
-    .ARM.exidx :
-    {
-        *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-    } > FLASH
-    __exidx_end = .;
 
     . = ALIGN(4);
     __etext = .;

@@ -126,12 +126,12 @@ int _write(int file, char *ptr, int len) {
 *   including stdout.
 *   Write data via RTT.
 */
-_ssize_t _write_r _PARAMS((struct _reent *r, int file, const void *ptr, size_t len)) {
-  (void) file;  /* Not used, avoid warning */
-  (void) r;     /* Not used, avoid warning */
-  SEGGER_RTT_Write(0, ptr, len);
-  return len;
-}
+//XXX _ssize_t _write_r _PARAMS((struct _reent *r, int file, const void *ptr, size_t len)) {
+//XXX  (void) file;  /* Not used, avoid warning */
+//XXX  (void) r;     /* Not used, avoid warning */
+//XXX  SEGGER_RTT_Write(0, ptr, len);
+//XXX  return len;
+//XXX}
 
 #endif // #if (defined __GNUC__) && !(defined __SES_ARM) && !(defined __CROSSWORKS_ARM)
 #endif // defined(NRF_LOG_USES_RTT) && NRF_LOG_USES_RTT == 1

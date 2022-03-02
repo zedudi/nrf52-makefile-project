@@ -5,7 +5,7 @@
  *      Author: doodie
  */
 
-#include "app_misc.h"
+#include "../.example_app/app_misc.h"
 
 /**@brief Function for the Timer initialization.
  *

@@ -1,12 +1,11 @@
-#include "app_misc.h"
-#include "app_ble.h"
-
 #include "nrf.h"
 
 #include <stdbool.h>
 #include <stdint.h>
 #include <string.h>
 
+#include "../.example_app/app_ble.h"
+#include "../.example_app/app_misc.h"
 #include "platform/Atomic.h"
 
 /**@brief Function for application main entry.
